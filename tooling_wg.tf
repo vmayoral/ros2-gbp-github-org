@@ -17,4 +17,5 @@ module "tooling_wg_team" {
   team_name    = "tooling_wg"
   members      = local.tooling_wg_team
   repositories = local.tooling_wg_repositories
+  depends_on   = [github_membership.members, github_repository.repositories]
 }

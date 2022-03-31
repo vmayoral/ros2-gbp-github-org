@@ -14,4 +14,5 @@ module "universal_robots_team" {
   team_name    = "universal_robots"
   members      = local.universal_robots_team
   repositories = local.universal_robots_repositories
+  depends_on   = [github_membership.members, github_repository.repositories]
 }
